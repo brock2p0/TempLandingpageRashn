@@ -198,15 +198,15 @@ const RashnLanding = () => {
               </div>
               <div className="flex flex-wrap gap-4 mt-8">
                 <div className="flex items-center space-x-2 bg-lime-100 px-4 py-2 rounded-full">
-                  <span className="text-teal-600">🌱</span>
+                  <span className="text-teal-600 w-2 h-2 bg-teal-600 rounded-full"></span>
                   <span className="text-teal-800 font-medium">Local Partners</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-lime-100 px-4 py-2 rounded-full">
-                  <span className="text-teal-600">🚚</span>
+                  <span className="text-teal-600 w-2 h-2 bg-teal-600 rounded-full"></span>
                   <span className="text-teal-800 font-medium">Fresh Delivery</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-lime-100 px-4 py-2 rounded-full">
-                  <span className="text-teal-600">⏰</span>
+                  <span className="text-teal-600 w-2 h-2 bg-teal-600 rounded-full"></span>
                   <span className="text-teal-800 font-medium">Time-Saving</span>
                 </div>
               </div>
