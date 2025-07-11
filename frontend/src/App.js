@@ -429,12 +429,10 @@ const RashnLanding = () => {
             
             <div>
               <h3 className="font-semibold mb-4">Our Brand</h3>
-              <div className="bg-teal-800 rounded-lg p-4 text-center">
-                <img 
-                  src="/root/.emergent/automation_output/20250711_122632/final_20250711_122632.jpeg" 
-                  alt="Rashn Logo" 
-                  className="w-full max-w-32 mx-auto h-16 object-cover rounded-lg"
-                />
+              <div className="bg-teal-800 rounded-lg p-6 text-center">
+                <div className="w-24 h-16 bg-gradient-to-r from-lime-400 to-lime-500 rounded-lg flex items-center justify-center mx-auto">
+                  <span className="text-teal-900 font-bold text-sm tracking-wider">RASHN</span>
+                </div>
               </div>
             </div>
           </div>
