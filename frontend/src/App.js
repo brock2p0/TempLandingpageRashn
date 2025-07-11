@@ -272,16 +272,37 @@ const RashnLanding = () => {
       </section>
 
       {/* Email Signup Section */}
-      <section id="signup" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-teal-900 to-aqua-800">
+      <motion.section 
+        id="signup" 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-teal-900 to-aqua-800"
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <motion.h2 
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="text-3xl md:text-5xl font-bold text-white mb-6"
+          >
             Be the First to Experience Rashn
-          </h2>
-          <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto"
+          >
             Join our waitlist and get exclusive lifetime benefits when we launch. Fresh produce, delivered fresh, just for you.
-          </p>
+          </motion.p>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 max-w-2xl mx-auto">
+          <motion.div 
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 max-w-2xl mx-auto"
+          >
             <form onSubmit={handleEmailSubmit} className="space-y-6">
               <div>
                 <input
@@ -289,7 +310,7 @@ const RashnLanding = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
-                  className="w-full px-6 py-4 rounded-xl bg-white/90 text-teal-900 placeholder-slate-500 border-2 border-transparent focus:border-lime-400 focus:outline-none font-medium"
+                  className="w-full px-6 py-4 rounded-xl bg-white/90 text-teal-900 placeholder-slate-500 border-2 border-transparent focus:border-lime-400 focus:outline-none font-medium transition-all duration-200"
                   required
                 />
               </div>
@@ -310,35 +331,64 @@ const RashnLanding = () => {
                 </label>
               </div>
               
-              <button
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 type="submit"
                 disabled={isSubmitting || !email || !gdprConsent}
-                className="w-full bg-gradient-to-r from-lime-400 to-lime-500 text-teal-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-lime-500 hover:to-lime-600 transform hover:scale-105 transition-all duration-200 shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full bg-gradient-to-r from-lime-400 to-lime-500 text-teal-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-lime-500 hover:to-lime-600 transition-all duration-200 shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
-                {isSubmitting ? 'Joining...' : 'Join the Waitlist'}
-              </button>
+                {isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-teal-900"></div>
+                    <span>Joining...</span>
+                  </>
+                ) : (
+                  <>
+                    <Mail size={20} />
+                    <span>Join the Waitlist</span>
+                  </>
+                )}
+              </motion.button>
             </form>
             
-            {showSuccess && (
-              <div className="mt-4 p-4 bg-lime-400/20 border border-lime-400 rounded-xl">
-                <p className="text-lime-100 font-semibold">🎉 Welcome to Rashn! Check your email for exclusive updates.</p>
-              </div>
-            )}
-          </div>
+            <AnimatePresence>
+              {showSuccess && (
+                <motion.div 
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  className="mt-4 p-4 bg-lime-400/20 border border-lime-400 rounded-xl"
+                >
+                  <div className="flex items-center justify-center space-x-2">
+                    <CheckCircle className="w-5 h-5 text-lime-400" />
+                    <p className="text-lime-100 font-semibold">Welcome to Rashn! Check your email for exclusive updates.</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
 
-          <div className="mt-12">
+          <motion.div 
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="mt-12"
+          >
             <p className="text-teal-100 mb-4 font-semibold">Have feedback? Help us build something amazing!</p>
-            <a 
+            <motion.a 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="#survey-placeholder" 
               className="inline-flex items-center space-x-2 bg-white/20 text-white px-6 py-3 rounded-xl font-medium hover:bg-white/30 transition-all duration-200"
             >
-              <span>📋</span>
+              <ExternalLink size={20} />
               <span>Take Our Quick Survey</span>
-            </a>
+            </motion.a>
             <p className="text-teal-200 text-sm mt-2">Survey link coming soon</p>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="bg-teal-900 text-white py-12 px-4 sm:px-6 lg:px-8">
