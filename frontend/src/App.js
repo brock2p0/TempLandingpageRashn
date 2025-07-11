@@ -267,14 +267,6 @@ const RashnLanding = () => {
               </motion.div>
             ))}
           </div>
-
-          <div className="mt-16 text-center">
-            <img 
-              src="https://images.unsplash.com/photo-1695653422259-8a74ffe90401?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxncm9jZXJ5JTIwZGVsaXZlcnl8ZW58MHx8fHwxNzUyMjM0NzM2fDA&ixlib=rb-4.1.0&q=85" 
-              alt="Convenient delivery service" 
-              className="w-full max-w-2xl mx-auto h-64 object-cover rounded-2xl shadow-2xl"
-            />
-          </div>
         </div>
       </section>
 
