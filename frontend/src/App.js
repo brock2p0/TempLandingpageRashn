@@ -79,7 +79,12 @@ const RashnLanding = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center"
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-teal-900/20 to-aqua-800/20 backdrop-blur-sm"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -89,34 +94,81 @@ const RashnLanding = () => {
         ></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center bg-lime-100 text-teal-800 px-4 py-2 rounded-full text-sm font-medium">
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center bg-lime-100 text-teal-800 px-4 py-2 rounded-full text-sm font-medium"
+            >
               🌱 Fresh from Local Farms • Delivered to Your Door
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-teal-900 leading-tight">
+            </motion.div>
+            <motion.h1 
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-teal-900 leading-tight"
+            >
               Your Time is 
               <span className="bg-gradient-to-r from-aqua-600 to-teal-600 bg-clip-text text-transparent"> Precious</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            </motion.h1>
+            <motion.p 
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            >
               Skip the grocery store. Get fresh, premium produce delivered from local Omani farms directly to your doorstep. 
               <span className="text-teal-600 font-semibold">More family time, less shopping stress.</span>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-              <button 
+            </motion.p>
+            <motion.div 
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8"
+            >
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('signup')}
-                className="bg-gradient-to-r from-teal-600 to-aqua-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-teal-700 hover:to-aqua-600 transform hover:scale-105 transition-all duration-200 shadow-xl"
+                className="bg-gradient-to-r from-teal-600 to-aqua-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-teal-700 hover:to-aqua-600 transition-all duration-200 shadow-xl flex items-center space-x-2"
               >
-                Join the Waitlist
-              </button>
-              <button 
+                <Mail size={20} />
+                <span>Join the Waitlist</span>
+              </motion.button>
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('about')}
-                className="bg-white/80 backdrop-blur-sm text-teal-800 px-8 py-4 rounded-2xl font-semibold border-2 border-teal-200 hover:bg-white hover:shadow-lg transition-all duration-200"
+                className="bg-white/80 backdrop-blur-sm text-teal-800 px-8 py-4 rounded-2xl font-semibold border-2 border-teal-200 hover:bg-white hover:shadow-lg transition-all duration-200 flex items-center space-x-2"
               >
-                Learn More
-              </button>
-            </div>
+                <span>Learn More</span>
+                <ChevronDown size={20} />
+              </motion.button>
+            </motion.div>
+            
+            {/* Stats Section */}
+            <motion.div 
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1, duration: 0.8 }}
+              className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
+            >
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-800">500+</div>
+                <div className="text-slate-600 text-sm">Families Waiting</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-800">15+</div>
+                <div className="text-slate-600 text-sm">Partner Farms</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-800">24h</div>
+                <div className="text-slate-600 text-sm">Fresh Delivery</div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
