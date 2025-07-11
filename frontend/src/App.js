@@ -66,9 +66,7 @@ const RashnLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-12 h-8 bg-gradient-to-r from-teal-600 to-aqua-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xs tracking-wider">RASHN</span>
-              </div>
+              <Logo size="sm" variant="primary" />
               <span className="text-xl font-bold text-teal-800">Rashn</span>
             </div>
             <div className="hidden md:flex space-x-8">
