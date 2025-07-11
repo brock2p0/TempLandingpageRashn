@@ -1,0 +1,30 @@
+{
+  "name": "rashn-landing-page",
+  "version": "1.0.0",
+  "description": "Modern landing page for Rashn e-grocery delivery service in Oman",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd frontend && yarn install",
+    "start": "cd frontend && yarn start",
+    "build": "cd frontend && yarn build",
+    "deploy": "cd frontend && yarn build && cd .. && cp -r frontend/build/* ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/USERNAME/rashn-landing-page.git"
+  },
+  "keywords": [
+    "landing-page",
+    "react",
+    "grocery-delivery",
+    "oman",
+    "e-commerce",
+    "responsive"
+  ],
+  "author": "Rashn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/USERNAME/rashn-landing-page/issues"
+  },
+  "homepage": "https://USERNAME.github.io/rashn-landing-page"
+}
