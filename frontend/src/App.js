@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail, CheckCircle, ExternalLink, Heart, Truck, Clock, Users } from "lucide-react";
+import Logo from "./components/Logo";
 import "./App.css";
 
 const RashnLanding = () => {
