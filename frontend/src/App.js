@@ -406,13 +406,13 @@ const RashnLanding = () => {
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-teal-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
-                  <span className="text-sm">📘</span>
+                  <div className="w-5 h-5 bg-teal-400 rounded"></div>
                 </div>
                 <div className="w-10 h-10 bg-teal-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
-                  <span className="text-sm">📷</span>
+                  <div className="w-5 h-5 bg-teal-400 rounded"></div>
                 </div>
                 <div className="w-10 h-10 bg-teal-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
-                  <span className="text-sm">🐦</span>
+                  <div className="w-5 h-5 bg-teal-400 rounded"></div>
                 </div>
               </div>
               <p className="text-teal-300 text-sm mt-2">Social media links coming soon</p>
