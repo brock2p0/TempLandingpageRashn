@@ -20,17 +20,24 @@ const RashnLanding = () => {
   // Handle email signup
   const handleEmailSubmit = async (e) => {
     e.preventDefault();
-    if (!email || !gdprConsent) return;
+    if (!email || !gdprConsent) {
+      alert('Please fill in all required fields and consent to receive updates.');
+      return;
+    }
     
     setIsSubmitting(true);
     // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500));
       setShowSuccess(true);
       setEmail('');
       setGdprConsent(false);
-      setTimeout(() => setShowSuccess(false), 3000);
-    }, 1000);
+      setTimeout(() => setShowSuccess(false), 5000);
+    } catch (error) {
+      console.error('Submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Add scroll effect
