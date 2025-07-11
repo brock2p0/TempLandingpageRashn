@@ -107,7 +107,7 @@ const RashnLanding = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-flex items-center bg-lime-100 text-teal-800 px-4 py-2 rounded-full text-sm font-medium"
             >
-              🌱 Fresh from Local Farms • Delivered to Your Door
+              Fresh from Local Farms • Delivered to Your Door
             </motion.div>
             <motion.h1 
               initial={{ y: 30, opacity: 0 }}
