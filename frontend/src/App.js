@@ -427,9 +427,7 @@ const RashnLanding = () => {
             <div>
               <h3 className="font-semibold mb-4">Our Brand</h3>
               <div className="bg-teal-800 rounded-lg p-6 text-center">
-                <div className="w-24 h-16 bg-gradient-to-r from-lime-400 to-lime-500 rounded-lg flex items-center justify-center mx-auto">
-                  <span className="text-teal-900 font-bold text-sm tracking-wider">RASHN</span>
-                </div>
+                <Logo size="lg" variant="secondary" className="mx-auto" />
               </div>
             </div>
           </div>
