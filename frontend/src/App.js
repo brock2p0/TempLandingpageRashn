@@ -94,8 +94,9 @@ const RashnLanding = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-teal-900/20 to-aqua-800/20 backdrop-blur-sm"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-10"
+          // USER ACTION: Replace this with your actual hero background image URL
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxncm9jZXJ5JTIwZGVsaXZlcnl8ZW58MHx8fHwxNzUyMjM0NzM2fDA&ixlib=rb-4.1.0&q=85")'
+            backgroundImage: 'url("https://via.placeholder.com/1920x1080.png?text=Rashn+Hero+Background")'
           }}
         ></div>
         <div className="relative max-w-7xl mx-auto text-center">
@@ -152,6 +153,7 @@ const RashnLanding = () => {
               </motion.button>
             </motion.div>
             
+            {/* USER ACTION: Verify and update these statistics as needed. */}
             {/* Stats Section */}
             <motion.div 
               initial={{ y: 40, opacity: 0 }}
@@ -212,8 +214,9 @@ const RashnLanding = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-teal-500 to-aqua-500 rounded-3xl opacity-20 blur-2xl"></div>
+              {/* USER ACTION: Replace this with your actual image for the About section */}
               <img 
-                src="https://images.pexels.com/photos/6994271/pexels-photo-6994271.jpeg" 
+                src="https://via.placeholder.com/800x600.png?text=Fresh+Produce+Delivered"
                 alt="Fresh produce delivery box" 
                 className="relative w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
@@ -374,6 +377,7 @@ const RashnLanding = () => {
             className="mt-12"
           >
             <p className="text-teal-100 mb-4 font-semibold">Have feedback? Help us build something amazing!</p>
+            {/* USER ACTION: Replace #survey-placeholder with your actual survey URL */}
             <motion.a 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -401,15 +405,20 @@ const RashnLanding = () => {
                 Fresh produce from local Omani farms, delivered to your door. 
                 More time for what matters most.
               </p>
+              {/* USER ACTION: Update social media links and icons below.
+                  Replace placeholder <div>s with actual <a> tags linking to your social profiles.
+                  You can use SVGs from a library like Lucide React (already imported) or other icon components.
+                  Also, update or remove the "Social media links coming soon" text if links are added. */}
               <div className="flex space-x-4">
+                {/* Example: Replace with <a href="your-facebook-url"><FacebookIcon /></a> */}
                 <div className="w-10 h-10 bg-teal-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
-                  <div className="w-5 h-5 bg-teal-400 rounded"></div>
+                  <div className="w-5 h-5 bg-teal-400 rounded"></div> {/* Placeholder for e.g., Facebook */}
                 </div>
                 <div className="w-10 h-10 bg-teal-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
-                  <div className="w-5 h-5 bg-teal-400 rounded"></div>
+                  <div className="w-5 h-5 bg-teal-400 rounded"></div> {/* Placeholder for e.g., Instagram */}
                 </div>
                 <div className="w-10 h-10 bg-teal-800 rounded-lg flex items-center justify-center cursor-pointer hover:bg-teal-700 transition-colors">
-                  <div className="w-5 h-5 bg-teal-400 rounded"></div>
+                  <div className="w-5 h-5 bg-teal-400 rounded"></div> {/* Placeholder for e.g., Twitter/X */}
                 </div>
               </div>
               <p className="text-teal-300 text-sm mt-2">Social media links coming soon</p>
@@ -433,8 +442,9 @@ const RashnLanding = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-teal-800 text-center">
+            {/* USER ACTION: Replace this with your actual footer image or remove if not needed */}
             <img 
-              src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHx2ZWdldGFibGVzfGVufDB8fHx8MTc1MjIzNTM4M3ww&ixlib=rb-4.1.0&q=85" 
+              src="https://via.placeholder.com/600x200.png?text=Fresh+Vegetables+Footer"
               alt="Fresh vegetables" 
               className="w-full max-w-md mx-auto h-32 object-cover rounded-xl opacity-60 mb-4"
             />
