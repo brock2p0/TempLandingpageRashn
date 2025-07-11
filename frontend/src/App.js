@@ -397,9 +397,11 @@ const RashnLanding = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-lime-400 to-lime-500 rounded-lg flex items-center justify-center">
-                  <span className="text-teal-900 font-bold text-sm">R</span>
-                </div>
+                <img 
+                  src="/root/.emergent/automation_output/20250711_122632/final_20250711_122632.jpeg" 
+                  alt="Rashn Logo" 
+                  className="w-8 h-8 object-cover rounded-lg"
+                />
                 <span className="text-xl font-bold">Rashn</span>
               </div>
               <p className="text-teal-200 leading-relaxed mb-4">
