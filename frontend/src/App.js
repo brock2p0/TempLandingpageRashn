@@ -231,26 +231,33 @@ const RashnLanding = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: "🎯",
+                icon: <Heart className="w-12 h-12 text-teal-600" />,
                 title: "Curated Selection",
                 description: "Hand-picked produce from verified local farms and suppliers. Only the freshest makes it to your door."
               },
               {
-                icon: "⏰",
+                icon: <Clock className="w-12 h-12 text-teal-600" />,
                 title: "Save 3+ Hours Weekly",
                 description: "Skip grocery shopping, traffic, and long queues. Spend more quality time with your family."
               },
               {
-                icon: "🌱",
+                icon: <Truck className="w-12 h-12 text-teal-600" />,
                 title: "Farm-to-Table Fresh",
                 description: "Direct partnerships with local Omani farms ensure maximum freshness and support local agriculture."
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-teal-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
-              </div>
+              <motion.div 
+                key={index}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <div className="mb-6 flex justify-center">{feature.icon}</div>
+                <h3 className="text-xl font-bold text-teal-900 mb-3 text-center">{feature.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-center">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
 
