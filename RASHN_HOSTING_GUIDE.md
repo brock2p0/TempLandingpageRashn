@@ -84,6 +84,22 @@ The landing page includes basic visitor tracking:
 
 ## 🔧 Customization Options
 
+### Adding Your Logo
+To replace the temporary styled text logo with your actual logo:
+1. Save your logo image in the `public` folder (e.g., `public/logo.png`)
+2. Edit `src/components/Logo.js`
+3. Uncomment the image return section and update the `logoImageUrl` variable
+4. Comment out the temporary styled text section
+5. Rebuild and redeploy
+
+Example:
+```javascript
+// In Logo.js, replace:
+const logoImageUrl = '/path/to/your/logo.png';
+// With:
+const logoImageUrl = '/logo.png';
+```
+
 ### Updating Content
 1. Edit the source files in `src/App.js`
 2. Update branding colors in `tailwind.config.js`
